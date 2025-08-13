@@ -1,0 +1,55 @@
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Multiplayer Starter – Create/Join Room</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1>Multiplayer Starter</h1>
+      <p class="muted">Create / Join Room ด้วย Supabase Realtime (Broadcast + Presence)</p>
+    </header>
+
+    <section class="card">
+      <div class="grid2">
+        <div>
+          <label class="lbl">ชื่อเล่น (แสดงในห้อง)</label>
+          <input id="nickname" class="input" placeholder="เช่น Techi" maxlength="24" />
+        </div>
+        <div>
+          <label class="lbl">Room ID</label>
+          <input id="roomId" class="input mono" placeholder="เช่น ab12cd" maxlength="24" />
+        </div>
+      </div>
+      <div class="row gap">
+        <button id="btnCreate" class="btn">Create Room</button>
+        <button id="btnJoin" class="btn btn-primary">Join Room</button>
+        <button id="btnLeave" class="btn btn-ghost" disabled>Leave</button>
+      </div>
+      <p id="share" class="share mono"></p>
+      <p id="status" class="status mono">status: idle</p>
+    </section>
+
+    <section class="card grid2">
+      <div>
+        <h2>Online</h2>
+        <ul id="online" class="list"></ul>
+      </div>
+      <div>
+        <h2>Chat (ตัวอย่าง Broadcast)</h2>
+        <div id="chat" class="chat"></div>
+        <div class="row gap">
+          <input id="chatInput" class="input" placeholder="พิมพ์ข้อความ... แล้วกด Enter" />
+          <button id="btnPing" class="btn">ส่ง Ping</button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="muted small">Made for GitHub Pages • Supabase Realtime • Works on desktop & mobile</footer>
+  </main>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
